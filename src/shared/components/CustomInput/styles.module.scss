@@ -1,0 +1,24 @@
+@import "@/assets/scss/variables.module.scss";
+
+.wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.icon {
+  position: absolute;
+  left: 24px;
+}
+
+.input {
+  width: 100%;
+  padding-left: 64px;
+  border: none;
+  height: 64px;
+  border-radius: 16px;
+  background-color: $color-light;
+  font-size: 16px;
+  color: $color-darkBlue;
+}

@@ -1,0 +1,20 @@
+@import "../../assets/scss/variables.module.scss";
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 80px;
+  margin-top: 24px;
+}
+
+.logo {
+  max-width: 88px;
+  max-height: 46px;
+}
+
+.text {
+  padding-left: 45px;
+  font-size: 16px;
+}
