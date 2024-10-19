@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 
 export type ICustomButton =
   | {
-      type: "classic" | "badge";
+      type: "primary" | "badge" | "secondary";
       text?: string;
       img?: StaticImageData;
       counter?: number;
@@ -13,7 +13,7 @@ export type ICustomButton =
       callback?: never;
     }
   | {
-      type: "classic" | "badge";
+      type: "primary" | "badge" | "secondary";
       text?: string;
       img?: StaticImageData;
       counter?: number;

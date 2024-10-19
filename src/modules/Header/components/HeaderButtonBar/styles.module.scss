@@ -1,0 +1,17 @@
+@import "../../../../assets/scss/variables.module.scss";
+
+.wrapper {
+  display: flex;
+}
+
+@media (max-width: 1440px) {
+  .wrapper {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 834px) {
+  .wrapper {
+    margin-left: 0;
+  }
+}
