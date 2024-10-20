@@ -33,3 +33,10 @@
   height: 48px;
   border-radius: 50%;
 }
+
+@media (max-width: 833px) {
+  .primary {
+    padding: 10px 17px;
+    font-size: 12px;
+  }
+}

@@ -3,3 +3,10 @@
   max-width: 630px;
   width: 100%;
 }
+
+@media (max-width: 833px) {
+  .form {
+    order: 2;
+    max-width: none;
+  }
+}
