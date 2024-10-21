@@ -1,0 +1,15 @@
+@import "../../../assets/scss/variables.module.scss";
+
+.text {
+  font-size: 14px;
+  font-weight: 400;
+  color: $color-darkBlue;
+}
+
+.success {
+  color: $color-successGreen;
+}
+
+.error {
+  color: $color-errorRed;
+}

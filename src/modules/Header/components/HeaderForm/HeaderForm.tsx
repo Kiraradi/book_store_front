@@ -17,6 +17,7 @@ const HeaderForm: FC = () => {
         value={text}
         onChange={handleChangeText}
         placeholder="Search"
+        name=""
       ></CustomInput>
     </form>
   );

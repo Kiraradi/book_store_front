@@ -5,8 +5,11 @@ import styles from "./styles.module.scss";
 const HeaderButtonBar: FC = () => {
   return (
     <div className={styles.wrapper}>
-      <CustomButton type="primary" disable={false} link="">
-        Log In/ Sing Up
+      <CustomButton type="primary" disable={false} link="/auth/logIn">
+        Log In
+      </CustomButton>
+      <CustomButton type="primary" disable={false} link="/auth/singUp">
+        Sing Up
       </CustomButton>
     </div>
   );

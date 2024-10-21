@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding-top: 90px;
+  padding-bottom: 80px;
+  justify-content: space-between;
+}
+
+.image {
+  max-height: 522px;
+  max-width: 612px;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  .image {
+    max-height: 333px;
+    max-width: 390px;
+  }
+}
+
+@media (max-width: 833px) {
+  .main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
+  }
+
+  .image {
+    max-height: 522px;
+    max-width: 612px;
+  }
+}

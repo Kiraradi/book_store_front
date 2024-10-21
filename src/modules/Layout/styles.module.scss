@@ -7,3 +7,9 @@
   justify-content: center;
   flex-direction: column;
 }
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+}
