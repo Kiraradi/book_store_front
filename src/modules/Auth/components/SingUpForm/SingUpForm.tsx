@@ -11,6 +11,7 @@ import passwordImage from "@/assets/icons/Hide.png";
 import styles from "./styles.module.scss";
 import CustomButton from "@/shared/components/CustomButton/CustomButton";
 import { SingUpSchema } from "./SingUpSchema";
+import UserServiceAPI from "@/services/UserServiceAPI";
 
 interface ISingUpData {
   email: string;
@@ -28,9 +29,17 @@ const SingUpForm: FC = () => {
     resolver: yupResolver(SingUpSchema),
     mode: "onTouched",
   });
-  const singUp = (data: ISingUpData) => {
-    console.log(data);
+  const singUp = async (data: ISingUpData) => {
+    const dataForRegister = {
+      email: data.email,
+      password: data.password,
+    };
+    const user = await UserServiceAPI.registerUser(dataForRegister);
+
+    console.log(user);
   };
+
+  console.log(errors);
   return (
     <div className={styles.wrapper}>
       <h2 className={styles.title}>Sing Up</h2>
@@ -77,10 +86,10 @@ const SingUpForm: FC = () => {
             validationStatus={errors.password ? "error" : "success"}
           />
           <ErrorNotification
-            fieldName="passwordReplay"
+            fieldName="password Replay"
             text="Repeat your password without errors"
             isBeingFilledIn={watch("passwordReplay")?.length > 0}
-            validationStatus={errors.password ? "error" : "success"}
+            validationStatus={errors.passwordReplay ? "error" : "success"}
           />
         </div>
         <CustomButton type="primary" disable={false} link="" text="Sing Up" />

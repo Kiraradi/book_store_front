@@ -2,7 +2,6 @@
 import { FC } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 
 import CustomInput from "@/shared/components/CustomInput/CustomInput";
 import ErrorNotification from "@/shared/components/ErrorNotification/ErrorNotification";
@@ -11,20 +10,12 @@ import emailImage from "@/assets/icons/Mail.png";
 import passwordImage from "@/assets/icons/Hide.png";
 import styles from "./styles.module.scss";
 import CustomButton from "@/shared/components/CustomButton/CustomButton";
+import { LogInSchema } from "./LogInSchema";
 
 type FormData = {
   email: string;
   password: string;
 };
-const schema = yup
-  .object({
-    email: yup.string().email().required(),
-    password: yup
-      .string()
-      .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}$/)
-      .required(),
-  })
-  .required();
 
 const LogInForm: FC = () => {
   const {
@@ -33,9 +24,10 @@ const LogInForm: FC = () => {
     watch,
     formState: { errors },
   } = useForm<FormData>({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(LogInSchema),
     mode: "onTouched",
   });
+
   const logIn = (data: FormData) => {
     console.log(data);
   };

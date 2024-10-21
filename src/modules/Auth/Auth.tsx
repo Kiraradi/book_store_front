@@ -1,5 +1,4 @@
 import { FC, ReactNode } from "react";
-import LogInForm from "./components/LogInForm/LogInForm";
 import Image from "next/image";
 
 import authImage from "@/assets/images/human_image.png";
